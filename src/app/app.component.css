@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  /* Eliminamos el centrado vertical y horizontal */
+}
+
+.container {
+  padding-top: 30px;
+  text-align: center;
+  /* Mantendremos esta configuración para centrar el contenido dentro de la container */
+}
+
+.header {
+  background-color: rgb(0,0,0,0.9);
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 50px; /* Espacio superior para el título */
+  color: white;
+  font-family: 'Special Elite', cursive; /* Fuente detectivesca para el título */
+}
+
+.options-container {
+  margin: 20px auto; /* Márgenes para centrar horizontalmente, sin centrado vertical */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option {
+  width: 80%;
+  max-width: 300px;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid red;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Special Elite', cursive; /* Fuente detectivesca para los botones */
+}
+
+.option:hover {
+  background-color: #333;
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .option {
+    padding: 12px;
+    font-size: 16px;
+  }
+}

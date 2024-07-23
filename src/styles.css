@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('./assets/fondo.jpg'); /* Cambia la ruta a la ubicación de tu imagen */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen en el fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Fija la imagen para que no se mueva con el contenido */
+  color: white; /* Cambia el color del texto para que sea visible sobre el fondo */
+  min-height: 100vh; /* Asegura que el body tenga al menos la altura de la ventana del navegador */
+}

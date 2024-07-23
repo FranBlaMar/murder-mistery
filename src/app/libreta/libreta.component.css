@@ -1,0 +1,233 @@
+/* Contenedor del menú desplegable */
+.menu-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1001;
+}
+
+/* Estilo para el ícono del menú hamburguesa */
+.menu-icon {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  background-color: #333;
+  padding: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+a{
+  color: white
+}
+/* Estilo para el menú desplegable */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  font-family: 'Special Elite', cursive; 
+  top: 40px;
+  right: 0;
+  background-color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1000;
+  width: 200px;
+}
+
+/* Mostrar el menú cuando está abierto */
+.dropdown-menu.show {
+  display: block;
+}
+
+/* Estilo para los botones dentro del menú desplegable */
+.dropdown-menu button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-family: 'Special Elite', cursive; 
+}
+
+/* Espacio entre el ícono y el texto en los botones */
+.dropdown-menu button i {
+  margin-right: 8px;
+  
+}
+i{
+  color: white;
+}
+/* Estilo para el botón activo en el menú */
+.dropdown-menu button.active {
+  background: #666;
+  font-weight: bold;
+}
+
+/* Título de la pestaña activa en la parte superior izquierda */
+.tab-title {
+  position: fixed;
+  margin: auto;
+  top: 10px;
+  left: 10px;
+  font-family: 'Special Elite', cursive; 
+  font-size: 70px;
+  background-color: rgb(0,0,0,0.6);
+  border-radius: 100px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 700;
+  color: white;
+  z-index: 500;
+}
+h3{
+  font-family: 'Special Elite', cursive; 
+}
+ p{
+  font-family: 'Special Elite', cursive; 
+  font-size: 16px; /* Tamaño del texto del párrafo */
+  letter-spacing: 0.5px; /* Espaciado entre letras */
+  line-height: 1.6; /* Altura de línea para mejor legibilidad */
+  color: #f5f5f5; 
+ }
+.tab-content {
+  position: relative; /* Asegura la correcta colocación */
+  top: 80px; /* Ajusta la posición para crear espacio debajo del título */
+  padding: 20px; /* Espaciado interno del contenido */
+  background-color: rgba(0, 0, 0, 0.95); /* Fondo negro semi-transparente para el contenido */
+  color: white; /* Color del texto dentro del contenedor de contenido */
+}
+/* En el archivo lista-nombres.component.css */
+
+/* Elimina los puntos por defecto y el padding */
+ul {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+/* Estilo para cada ítem de la lista */
+.nombre-item {
+  border: 2px solid red; /* Borde rojo alrededor de cada ítem */
+  padding: 10px; /* Espacio interior del borde */
+  border-radius: 8px; /* Esquinas redondeadas del borde */
+  background-color: transparent; /* Fondo transparente */
+  margin-bottom: 16px; /* Espacio debajo de cada ítem */
+  text-align: center; /* Centra el texto */
+  width: 100%; /* Asegura que el ítem ocupe el 100% del contenedor padre */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total del elemento */
+}
+
+/* Estilo para el cuadro del nombre */
+.nombre-caja {
+  font-size: 20px; /* Tamaño del texto del nombre */
+  font-weight: bold; /* Fuente en negrita */
+  color: white; /* Color del texto blanco */
+  margin-bottom: 8px; /* Espacio debajo del nombre */
+}
+
+/* Estilo para el texto de prueba */
+.texto-prueba {
+  font-size: 14px; /* Tamaño del texto de prueba */
+  color: white; /* Color del texto blanco */
+  margin: 0; /* Elimina el margen por defecto del párrafo */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .nombre-caja {
+    font-size: 18px; /* Tamaño del texto del nombre en pantallas más pequeñas */
+  }
+
+  .texto-prueba {
+    font-size: 12px; /* Tamaño del texto de prueba en pantallas más pequeñas */
+  }
+
+  .nombre-item {
+    padding: 8px; /* Menor padding en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .nombre-caja {
+    font-size: 16px; /* Tamaño del texto del nombre en pantallas aún más pequeñas */
+  }
+
+  .texto-prueba {
+    font-size: 15px; /* Tamaño del texto de prueba en pantallas aún más pequeñas */
+  }
+
+  .nombre-item {
+    padding: 6px; /* Menor padding en pantallas aún más pequeñas */
+  }
+}
+.video-container {
+  position: relative;
+  display: inline-block;
+}
+
+.video-button {
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+}
+
+.modal video {
+  width: 100%;
+  height: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .menu-icon {
+    font-size: 20px;
+  }
+
+  .dropdown-menu button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .tab-title {
+    font-size: 40px;
+  }
+
+  .tab-content {
+    padding: 15px;
+  }
+}

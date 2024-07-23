@@ -1,0 +1,14 @@
+<div class="container" *ngIf="!seleccion">
+  <div class="header">
+    <h1>¿Quién eres?</h1>
+  </div>
+  <div class="options-container">
+    <button class="option" (click)="seleccionar(1)">Asukita</button>
+    <button class="option" (click)="seleccionar(2)">Pichadura</button>
+    <button class="option" (click)="seleccionar(3)">Ellinia</button>
+    <button class="option" (click)="seleccionar(4)">Zard</button>
+    <button class="option" (click)="seleccionar(5)">CarlitRos</button>
+  </div>  
+</div>
+
+<app-libreta *ngIf="seleccion" [seleccion]="seleccion"></app-libreta>

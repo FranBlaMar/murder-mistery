@@ -1,0 +1,91 @@
+<!-- Menú desplegable en la parte superior derecha -->
+<div class="menu-container">
+  <button class="menu-icon" (click)="toggleMenu()">
+    &#9776; <!-- Icono de tres líneas -->
+  </button>
+  <div class="dropdown-menu" [ngClass]="{'show': isMenuOpen}">
+    <button (click)="selectTab('historia')">
+      <i class="fa fa-book"></i> Historia
+    </button>
+    <button (click)="selectTab('sospechosos')">
+      <i class="fa fa-user"></i> Sospechosos
+    </button>
+    <button (click)="selectTab('pruebas')">
+      <i class="fa fa-search"></i> Pruebas
+    </button>
+    <button (click)="selectTab('situacion')">
+      <i class="fa fa-binoculars"></i> Perfil
+    </button>
+    <button (click)="selectTab('notas')">
+      <i class="fa fa-pencil"></i> Notas
+    </button>
+  </div>
+</div>
+
+<div>
+  <div class="tab-title">
+    {{ activeTabTitle }}
+  </div>
+
+  <!-- Recuadro de texto con fondo negro semi-transparente -->
+  <div class="tab-content">
+    <!-- Aquí va el contenido de la pestaña activa -->
+    <div *ngIf="activeTabTitle == 'Historia'">
+      <h3>El incidente de C.Ballena</h3>
+      <p>En el tranquilo pueblo costero de Costa Ballena, la paz se ha visto abruptamente interrumpida por un asesinato que desafía las expectativas.</p>
+      <p>La víctima, Kike, fue encontrado sin vida en el centro de la plaza del pueblo (Fue nuestro George Floyd). </p> 
+      <p>A las 18:30 se ha escuchado un estruendo por toda la zona central del pueblo. 
+        Testigos locales de la zona declaran: <audio #audioPlayer src='assets/POOM.mp3'></audio>
+        <a href="#" (click)="playAudio($event)" class="play-button">
+          <i class="fas fa-volume-up"></i>
+        </a>. 
+        Un joven testigo declaró "Ha sido una pena, casi lo tenia pero no pudo completar la Kikedex".
+      </p>
+      <p> </p>
+      <p>La causa de muerte ha sido una explosión desconocida. Se le ha reconocido por el dni que se ha encontrado junto al cuerpo: 
+        <a [href]="imageUrlDni" target="_blank" class="photo-icon-link">
+          <i class="fa-regular fa-image"></i>
+        </a>
+      </p>
+      <p> Los sospechosos son sus mejores amigos con los cuales había quedado para pasar una semana en la playa.</p>
+    </div>
+
+    <div *ngIf="activeTabTitle == 'Sospechosos'"> 
+      <ul>
+        <li *ngFor="let nombre of nombres" class="nombre-item">
+          <div class="nombre-caja">
+            {{ nombre.nombre }}
+          </div>
+          <p class="texto-prueba">{{ nombre.sospechas }}</p>
+        </li>
+      </ul>
+    </div>
+
+    <div *ngIf="activeTabTitle == 'Pruebas'"> 
+      <div *ngIf="(seleccion) && (seleccion == 2 || seleccion == 3 || seleccion == 5)">
+        <p>Valheim:</p>
+        <div class="video-container">
+          <button (click)="openModal()" class="video-button">
+            <i class="fa-solid fa-video"></i>
+          </button>
+          <div *ngIf="isModalOpen" class="modal">
+            <div class="modal-content">
+              <span class="close" (click)="closeModal()">&times;</span>
+              <video controls autoplay>
+                <source src="assets/Valheim.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="(seleccion) && (seleccion == 4)">
+        <p>Comida:</p>
+        <a [href]="imageComida" target="_blank" class="photo-icon-link">
+          <i class="fa-regular fa-image"></i>
+        </a>
+    </div>
+    
+  </div>
+</div>
