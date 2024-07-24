@@ -17,7 +17,7 @@
       <i class="fa fa-binoculars"></i> Perfil
     </button>
     <button (click)="selectTab('shitpost')">
-      <i class="fa fa-pencil"></i> Notas
+      <i class="fa fa-pencil"></i> Shitpost
     </button>
   </div>
 </div>
@@ -222,33 +222,23 @@
     </div>
     <div  *ngIf="activeTabTitle == 'Shitpost'">
       <div *ngIf="(seleccion) && (seleccion == 1)">
-        <a [href]="meme3" target="_blank" class="photo-icon-link">
-          <i class="fa-regular fa-image"></i>
-        </a>
+        <img [src]="meme3"  width="600">
       </div>
 
       <div *ngIf="(seleccion) && (seleccion == 2)">
-        <a [href]="meme5" target="_blank" class="photo-icon-link">
-          <i class="fa-regular fa-image"></i>
-        </a>
+        <img [src]="meme5"  width="600">
       </div>
 
       <div *ngIf="(seleccion) && (seleccion == 3)">
-        <a [href]="meme4" target="_blank" class="photo-icon-link">
-          <i class="fa-regular fa-image"></i>
-        </a>
+        <img [src]="meme4"  width="600">
       </div>
 
       <div *ngIf="(seleccion) && (seleccion == 4)">
-        <a [href]="meme2" target="_blank" class="photo-icon-link">
-          <i class="fa-regular fa-image"></i>
-        </a>
+        <img [src]="meme2"  width="600">
       </div>
 
       <div *ngIf="(seleccion) && (seleccion == 5)">
-        <a [href]="meme1" target="_blank" class="photo-icon-link">
-          <i class="fa-regular fa-image"></i>
-        </a>
+        <img [src]="meme1"  width="600">
       </div>
     </div>
   </div>
