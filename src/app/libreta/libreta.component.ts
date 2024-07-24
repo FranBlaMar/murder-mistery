@@ -13,6 +13,12 @@ export class LibretaComponent {
   isMenuOpen = false;
   imageUrlDni: string = 'assets/dni.png';
   imageComida: string = 'assets/comida.jpg';
+  imagenEstudiar: string= 'assets/estudiando.jpeg';
+  imagenPlaya: string= 'assets/playa.jpg';
+  imagenPaseo: string= 'assets/paseo.jpeg';
+  imagenDibujo: string= 'assets/dibujo.jpg';
+  imagenAlarma: string= 'assets/alarma.jpeg';
+
   activeTab: string = 'historia'; // Pestaña activa inicial
   @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>;
   nombres: any[] = [{nombre:'Asukita', sospechas:'Asukita es la cuñada de Cristina. No era especialmente amiga de Kike, ya que este nunca intento regalarle nada. Hace dias tuvo una discusión violenta tras la declaración de Kike sobre que todas las féminas son rencorosas. Durante la tarde del asesinato, Asukita se encontraba comiendo pozolito en el salon del piso tras haber estado leyendo mangas en el sofa y dar un paseo.'}, 

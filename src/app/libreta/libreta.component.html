@@ -13,7 +13,7 @@
     <button (click)="selectTab('pruebas')">
       <i class="fa fa-search"></i> Pruebas
     </button>
-    <button (click)="selectTab('situacion')">
+    <button (click)="selectTab('perfil')">
       <i class="fa fa-binoculars"></i> Perfil
     </button>
     <button (click)="selectTab('notas')">
@@ -80,11 +80,145 @@
         </div>
       </div>
 
+      <div *ngIf="(seleccion) && (seleccion == 1)">
+        <p>Pozolito:</p>
+        <div class="video-container">
+          <button (click)="openModal()" class="video-button">
+            <i class="fa-solid fa-video"></i>
+          </button>
+          <div *ngIf="isModalOpen" class="modal">
+            <div class="modal-content">
+              <span class="close" (click)="closeModal()">&times;</span>
+              <video controls autoplay>
+                <source src="assets/pozolito.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div *ngIf="(seleccion) && (seleccion == 4)">
         <p>Comida:</p>
         <a [href]="imageComida" target="_blank" class="photo-icon-link">
           <i class="fa-regular fa-image"></i>
         </a>
+      </div>
+
+      <div *ngIf="(seleccion) && (seleccion == 4)">
+        <p>Estudiar:</p>
+        <a [href]="imagenEstudiar" target="_blank" class="photo-icon-link">
+          <i class="fa-regular fa-image"></i>
+        </a>
+      </div>
+
+      <div *ngIf="(seleccion) && (seleccion == 1)">
+        <p>Paseo:</p>
+        <a [href]="imagenPaseo" target="_blank" class="photo-icon-link">
+          <i class="fa-regular fa-image"></i>
+        </a>
+      </div>
+
+      <div *ngIf="(seleccion) && (seleccion == 2)">
+        <p>Foto Playa:</p>
+        <a [href]="imagenPlaya" target="_blank" class="photo-icon-link">
+          <i class="fa-regular fa-image"></i>
+        </a>
+      </div>
+
+      <div *ngIf="(seleccion) && (seleccion == 5)">
+        <p>Alarma siesta:</p>
+        <a [href]="imagenAlarma" target="_blank" class="photo-icon-link">
+          <i class="fa-regular fa-image"></i>
+        </a>
+      </div>
+
+      <div *ngIf="(seleccion) && (seleccion == 3)">
+        <p>Dibujo en la piscina:</p>
+        <a [href]="imagenDibujo" target="_blank" class="photo-icon-link">
+          <i class="fa-regular fa-image"></i>
+        </a>
+      </div>
+
+
+    </div>
+
+    <div *ngIf="activeTabTitle == 'Perfil'">
+      <div *ngIf="(seleccion) && (seleccion == 1)">
+        <p> NO ERES LA ASESINA</p>
+        <p> Todos os despertasteis a las 12:00 desayunasteis y comisteis juntos. Terminasteis de comer a las 13:00.</p>
+        <p> Todos estaban jugando a juegos de mesa en el salon despues de comer. Menos tú.</p>
+        <p> Tu estabas desde las 13:00 hasta las 15:00 en la terraza leyendo mangas y comiendo pozolito. Todos te vieron.</p>
+        <p> Ellinia y Pichadura se fueron a la calle a las 14:00. CarlitRos se fue a echarse una siesta a la vez que ambos se fueron.</p>
+        <p> Zard se fue a las 15:00 a comer otra vez y tu saliste a pasear por el barrio a la misma hora. (Puedes improvisar) </p>
+        <p> Volviste a las 16:00 y te asomaste para ver a Ellinia en la piscina dibujando.</p>
+        <p> Al llegar a casa estabas sola, CarlitRos seguia durmiendo. Tu te pusiste a ver tiktok en el sofa</p>
+        <p> A las 17:30 volvieron Pichadura y Zard. Zard se fue a su habitacion a estudiar. Pichadura se fue a ver videos de Arygameplays a la terraza.</p>
+        <p> A las 18:00 llego Ellinia a casa.</p>
+        <p> A las 18:00 suena el despestador de CarlitRos sale de la habitación y se ponen Pichadura, Ellinia y él a jugar al Valheim.</p>
+      </div>
+
+      <div *ngIf="(seleccion) && (seleccion == 2)">
+        <p> NO ERES El ASESINO</p>
+        <p> Todos os despertasteis a las 12:00 desayunasteis y comisteis juntos. Terminasteis de comer a las 13:00.</p>
+        <p> Todos estabais jugando a juegos de mesa en el salon despues de comer. Menos Asukita.</p>
+        <p> Asukita se puso en la terraza leyendo, no viste que leia y comiendo pozolito.</p>
+        <p> A las 14:00 te fuiste a la playa bajaste con Ellinia y os despedisteis en el bloque. Ella se fue a la piscina a dibujar.</p>
+        <p> CarlitRos se fue a echarse una siesta a la vez que os fuisteis.</p>
+        <p> Pasaste la tarde en la playa haciendo cosas normales de playa (Puedes improvisar)</p>
+        <p> A las 17:00 te fuiste de la playa y viste a Zard salir de un bar, os volvisteis juntos a casa. Zard se fue a su habitacion a estudiar. Tu te pusiste a ver videos de Arygameplays a la terraza.</p>
+        <p> Viste a CarlitRos salir al baño a esa hora. </p>
+        <p> Al volver estaba Asukita viendo tiktoks en el sofa, y CarlitRos seguia en su habitacion en la siesta.</p>
+        <p> A las 18:00 llega Ellinia a casa y suena el despestador de CarlitRos. Os pusisteis tu, Ellinia y él a jugar al Valheim.</p>
+      </div>
+
+      <div *ngIf="(seleccion) && (seleccion == 3)">
+        <p> NO ERES El ASESINO</p>
+        <p> Todos os despertasteis a las 12:00 desayunasteis y comisteis juntos. Terminasteis de comer a las 13:00.</p>
+        <p> Todos estabais jugando a juegos de mesa en el salon despues de comer. Menos Asukita.</p>
+        <p> Asukita se puso en la terraza leyendo, no viste que leia y comiendo pozolito.</p>
+        <p> A las 14:00 se fue Pichadura con Ellinia. Ella se fue a la piscina a dibujar y Pichadura se fue a la playa.</p>
+        <p> CarlitRos se fue a echarse una siesta a la vez que ambos se fueron.</p>
+        <p> A las 15:00 saliste a comer, viste como Asukita salia detras de ti. Fuiste a un bar a comer tienes pruebas (Puedes improvisar)</p>
+        <p> A las 17:00 saliste del bar y viste a Pichadura, os volvisteis juntos a casa. Tu te fuiste a tu habitacion a estudiar. Pichadura se puso a ver videos de Arygameplays a la terraza.</p>
+        <p> Viste a CarlitRos salir al baño a esa hora. </p>
+        <p> Al volver estaba Asukita viendo tiktoks en el sofa, y CarlitRos seguia en su habitacion en la siesta.</p>
+        <p> A las 18:00 llega Ellinia a casa y suena el despestador de CarlitRos. Se pusieron Pichadura, Ellinia y CarlitRos a jugar al Valheim.</p>
+      </div>
+
+      <div *ngIf="(seleccion) && (seleccion == 4)">
+        <p> NO ERES LA ASESINA</p>
+        <p> Todos os despertasteis a las 12:00 desayunasteis y comisteis juntos. Terminasteis de comer a las 13:00.</p>
+        <p> Todos estabais jugando a juegos de mesa en el salon despues de comer. Menos Asukita.</p>
+        <p> Asukita se puso en la terraza leyendo, no viste que leia y comiendo pozolito.</p>
+        <p> A las 14:00 se fue Pichadura y tu. Tu te fuiste a la piscina a dibujar (Puedes improvisar) y Pichadura se fue a la playa.</p>
+        <p> CarlitRos se fue a echarse una siesta a la vez que ambos os fuisteis.</p>
+        <p> A las 16:00 viste a Asukita volver de la calle y te saludo.</p>
+        <p> A las 18:00 subes a casa y suena el despestador de CarlitRos. Os pusisteis  Pichadura, CarlitRos y tú a jugar al Valheim.</p>
+      </div>
+
+      <div *ngIf="(seleccion) && (seleccion == 5)">
+        <p> ERES EL ASESINO</p>
+        <p> COMO LO HICISTE: A las 15:30 fuiste a comprar al chino cuerda y unos lapices para inculpar a Ellinia. Estuviste estudiando sobre como hacer bombas, y usaste una muñeca hinchable para colocarle la bomba. Dejaste la muñeca en la plaza porque sabías que el Kike intentaria ligarsela y cuando se le acercara explotaría la bomba.</p>
+        <p> Le mataste porque te pidió dinero para un master y te enteraste que se lo había gastado en hacer un curso de paellas.</p>
+        <br> 
+        <p> COARTADA: </p>
+        <p> Todos os despertasteis a las 12:00 desayunasteis y comisteis juntos. Terminasteis de comer a las 13:00.</p>
+        <p> Todos estabais jugando a juegos de mesa en el salon despues de comer. Menos Asukita.</p>
+        <p> Asukita se puso en la terraza leyendo, no viste que leia y comiendo pozolito.</p>
+        <p> A las 14:00 se fueron Pichadura y Ellinia. Pichadura a la playa y ellinia a la piscina.</p>
+        <p> Tu te fuistes a las 14:00 a dormir y te pusiste el despertado a las 18:00 para jugar al Valheim.</p>
+        <p> A las 15:00 escuchaste a Zard y a Asukita irse.</p>
+        <p> A las 15:30 fuiste a comprar la cuerda y colocaste la muñeca con explosivos en la plaza. Luego volviste a casa y usaste la cuerda para subir por la ventana. Asi todos creerian que estuviste durmiendo toda la tarde.</p>
+        <p> No escuchaste volver a Asukita ya que estabas fuera (Puedes decir estabas dormido)</p>
+        <p> A las 17:00 ya estabas en casa finjiste salir al baño para que pensaran que estabas alli todo el tiempo. Te vieron Pichadura y zard.</p>
+        <p> RECUERDA: Tu supuesta siesta empezo a las 14:00 y a las 17:00 fuiste al baño. A las 18:00 despertaste y jugaste al Valheim.</p>
+        <p> A las 18:00 sube Ellinia a casa y suena tu despertador. Os pusisteis Pichadura, Ellinia y tú a jugar al Valheim.</p>
+        <p> RECOMENDACIÓN: Recuerda que ya inculpaste a Ellinia al comprar los lapices. Se va a colocar un pista con el ticket de compra cerca de la puerta de entrada. No seas descarado al buscarla y deja que el resto sospeche de Ellinia y los lapices. Si la culpas rápido podrían sospechar.</p>
+        <p> Si encuentras otras pistas puedes ocultarlas al resto, pero que no te pillen escondiendola.</p>
+      </div>
+
+
     </div>
     
   </div>
