@@ -19,6 +19,12 @@ export class LibretaComponent {
   imagenDibujo: string= 'assets/dibujo.jpg';
   imagenAlarma: string= 'assets/alarma.jpeg';
 
+  meme1: string ='assets/meme1.jpeg'
+  meme2: string ='assets/meme2.jpeg'
+  meme3: string ='assets/meme3.jpeg'
+  meme4: string ='assets/meme4.jpeg'
+  meme5: string ='assets/meme5.jpeg'
+
   activeTab: string = 'historia'; // Pestaña activa inicial
   @ViewChild('audioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>;
   nombres: any[] = [{nombre:'Asukita', sospechas:'Asukita es la cuñada de Cristina. No era especialmente amiga de Kike, ya que este nunca intento regalarle nada. Hace dias tuvo una discusión violenta tras la declaración de Kike sobre que todas las féminas son rencorosas. Durante la tarde del asesinato, Asukita se encontraba comiendo pozolito en el salon del piso tras haber estado leyendo mangas en el sofa y dar un paseo.'}, 
@@ -52,7 +58,7 @@ export class LibretaComponent {
       case 'sospechosos': return 'Sospechosos';
       case 'pruebas': return 'Pruebas';
       case 'perfil': return 'Perfil';
-      case 'notas': return 'Notas';
+      case 'shitpost': return 'Shitpost';
       default: return 'Historia';
     }
   }
